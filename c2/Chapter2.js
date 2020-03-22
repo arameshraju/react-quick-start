@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import InputButton from './InputButton';
-import SimpleForm from './SimpleForm'
+import SimpleForm from './SimpleForm';
+import FormValidation from './FormValidation'
 
 class Chapter2 extends Component{
   constructor(props){
@@ -13,6 +14,7 @@ class Chapter2 extends Component{
         <h1>Chapter 2 - Forms </h1>
         <InputButton></InputButton>
         <SimpleForm></SimpleForm>
+        <FormValidation></FormValidation>
 
       </React.Fragment>
     )
