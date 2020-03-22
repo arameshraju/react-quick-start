@@ -4,21 +4,48 @@ class FormValidation extends Component{
   constructor(props){
     super(props);
     this.state={
-      formName:'',formAge:'',formCity:''
+      formName:'',formAge:'',formCity:'',
+      validationErrors:{}
     };
     this.handleEventChange=this.handleEventChange.bind(this);
+    this.handleEventOnSubmit=this.handleEventOnSubmit.bind(this);
   }
   handleEventChange(e){
-    console.log(e.target.name);
-    this.setState({
+     this.setState({
       [e.target.name]:e.target.value
     })
   }
+  validateForm(){
+    const error={};
+    if(!this.state.formName){
+      error['errorName']='Name should name be empty'
+    }
+    if(!this.state.formAge){
+      error['errorAge']='Age should name be empty'
+    }else{
+      const n= parseInt(this.state.formAge);
+      console.log(n);
+      if(!(n>18 && n <65)){
+         error['errorAge']='Age should be between 18 to 65'
+      }
+    }
+    if(!this.state.formCity){
+      error['errorCity']='City should name be empty'
+    }
+    this.setState({
+      validationErrors:error
+    })
+  }
+  handleEventOnSubmit(e){
+    e.preventDefault();
+    this.validateForm();
+  }
+  
   render(){
     return (
       <React.Fragment>
       <h2>Form Validation & Submission Next Level</h2>
-      <form>
+      <form onSubmit={this.handleEventOnSubmit}>
       <table>
       <tr> 
         <td>Name</td><td><input type="text" name="formName" value={this.state.formName} onChange={this.handleEventChange} /></td>
@@ -33,10 +60,20 @@ class FormValidation extends Component{
       </table>  
       <button type="submit">Submit</button>
       </form>
+    <br/>
+    <span class="error">
+    errors if any <br/>
+          {this.state.validationErrors.errorName}<br/>
+      {this.state.validationErrors.errorAge}<br/>
+      {this.state.validationErrors.errorCity}<br/>
+
+</span>
       <br/>
       form Data: N: {this.state.formName} | A: {this.state.formAge} |C: {this.state.formCity}
             <br/>
       Last Submitted Data: N: {this.state.submittedName} | A: {this.state.submittedAge} |C: {this.state.submittedCity}
+      <br/>
+
       </React.Fragment>
     )
   }
