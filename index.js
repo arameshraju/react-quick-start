@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Chaper1 from './c1/Chaper1';
+import Chapter1 from './c1/Chapter1';
+import Chapter2 from './c2/Chapter2';
 import './style.css';
 
 class App extends Component {
@@ -14,8 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Chaper1></Chaper1>
-      
+       <Chapter2></Chapter2>
         <p>
           Start editing to see some magic happen :)
         </p>
