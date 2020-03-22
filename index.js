@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import SimpleComponent from './c1/SimpleComponent'
-import DataComponent from './c1/DataComponent'
-import LoopComponent from './c1/LoopComponent'
-
+import Chaper1 from './c1/Chaper1';
 import './style.css';
 
 class App extends Component {
@@ -17,12 +14,8 @@ class App extends Component {
   render() {
     return (
       <div>
-       <h1>Chaper-01</h1>
-        <SimpleComponent></SimpleComponent>
-        <hr/>
-        <DataComponent></DataComponent>
-        <hr/>
-        <LoopComponent></LoopComponent>
+      <Chaper1></Chaper1>
+      
         <p>
           Start editing to see some magic happen :)
         </p>
