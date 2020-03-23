@@ -4,10 +4,11 @@
 
 
 
-# 1. Ceating a Coponent
+# 1. Chapter-1 Ceating a Coponent
 
-# 2 Chaper 2  - Forms and Validations 
+# 2 Chapter-2  - Forms and Validations 
 
+# 3 Chapter-3 Simple Project todo list
 
 
 # v 1.0 Release update
