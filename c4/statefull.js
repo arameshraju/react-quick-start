@@ -10,6 +10,7 @@ class StatefullComponent extends Component{
       <h2>This is State Component</h2>
       <p> Stateless components   this will have all consturctors lifecycles etc. 
       just return</p>
+      <p>I have a prop value i.e : {this.props.propval}</p>
       </selection>
     )
   }

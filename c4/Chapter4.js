@@ -11,8 +11,8 @@ class Chapter4 extends Component{
     return(
       <React.Fragment>
         <h1>Chapter 4 - Statefull and Stateless Components</h1>
-        <StateLessComponent></StateLessComponent>
-        <StatefullComponent></StatefullComponent>
+        <StateLessComponent propval="Ramesh"></StateLessComponent>
+        <StatefullComponent propval="Alluri"></StatefullComponent>
       </React.Fragment>
     );
   }
