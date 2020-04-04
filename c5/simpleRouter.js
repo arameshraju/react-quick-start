@@ -1,10 +1,12 @@
 import React,{Component} from 'react';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import Service from './service';
 function Home() {
   return <h2>Home</h2>;
 }
@@ -16,6 +18,8 @@ function About() {
 function Users() {
   return <h2>Users </h2>;
 }
+
+
 class SimpleRouter extends Component{
   constructor(props){
     super(props);
@@ -33,7 +37,13 @@ class SimpleRouter extends Component{
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li><Link to="/users">Users</Link> 
+            <li><Link to="/users">Users</Link></li> 
+             <li> Services
+               <ol> 
+                <li><Link to="/service/software">Software</Link></li>
+                <li><Link to="/service/hardware">Hardware</Link></li>
+                <li><Link to="/service/networking">networking</Link></li>
+                </ol> 
             </li>
           </ul>
           <Switch>
@@ -43,7 +53,9 @@ class SimpleRouter extends Component{
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/">
+          <Route path="/service/:serviceId" Component={Service} />
+        
+           <Route path="/">
             <Home />
           </Route>
         </Switch>
