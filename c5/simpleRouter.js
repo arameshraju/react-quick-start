@@ -33,8 +33,13 @@ class SimpleRouter extends Component{
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li>
-              <Link to="/users">Users</Link>
+            <li>Users
+            <ol>
+              <li><Link to="/users/ramesh">Ramesh</Link></li>
+              <li><Link to="/users/Raja">Raja</Link></li>
+              <li><Link to="/users/Pavan">Pavan</Link></li>
+              <li><Link to="/users/RSP">RSP</Link></li>
+            </ol>
             </li>
           </ul>
           <Switch>
