@@ -14,7 +14,7 @@ function About() {
 }
 
 function Users() {
-  return <h2>Users</h2>;
+  return <h2>Users </h2>;
 }
 class SimpleRouter extends Component{
   constructor(props){
@@ -33,13 +33,7 @@ class SimpleRouter extends Component{
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li>Users
-            <ol>
-              <li><Link to="/users/ramesh">Ramesh</Link></li>
-              <li><Link to="/users/Raja">Raja</Link></li>
-              <li><Link to="/users/Pavan">Pavan</Link></li>
-              <li><Link to="/users/RSP">RSP</Link></li>
-            </ol>
+            <li><Link to="/users">Users</Link> 
             </li>
           </ul>
           <Switch>
