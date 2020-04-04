@@ -4,9 +4,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,useRouteMatch,
+  useParams
 } from "react-router-dom";
-import Service from './service';
+
 function Home() {
   return <h2>Home</h2>;
 }
@@ -18,7 +19,10 @@ function About() {
 function Users() {
   return <h2>Users </h2>;
 }
-
+function Service() {
+  let {serviceId}  = useParams();
+  return (<h2>Service {serviceId}</h2>);
+}
 
 class SimpleRouter extends Component{
   constructor(props){
@@ -53,9 +57,11 @@ class SimpleRouter extends Component{
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/service/:serviceId" Component={Service} />
+          <Route path="/service/:serviceId" >
+            <Service/>
+          </Route>
         
-           <Route path="/">
+           <Route exact path="/">
             <Home />
           </Route>
         </Switch>
