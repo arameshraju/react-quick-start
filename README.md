@@ -10,7 +10,7 @@
 
 # 3 Chapter-3 Simple Project todo list
 
-# 5 Chapter-3 Stateful and stateless components
+# 4 Chapter-4 Stateful and stateless components
 
 # 5 Chapter-5 Routers
 
